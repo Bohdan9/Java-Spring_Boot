@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>homework</title>
+</head>
+<body>
+
+<form action="/deliver/create/" method="post">
+    <input type="text" name="deliver" placeholder=" Deliver" >
+
+</form>
+
+<form action = "/car/create/" method="post">
+
+
+
+    <input type="text" name="car_make" placeholder=" car_make" >
+    <input type="text" name="model" placeholder="model" >
+    <input type="text" name="price" placeholder="Price" >
+    <input type="text" name="date_release" placeholder="date_release" >
+    <input type = "submit">
+</form>
+
+
+    <a href="/homework">
+        <h1><button >Homework</button></h1>
+    </a>
+
+<ul th:each="cars : ${car} ">
+    <li >
+
+        <a th:href="'/cars/' + ${cars.id}" th:text = "${cars.car_make}+ ' ' +  ${cars.model}"></a>
+
+    </li>
+
+
+</ul>
+
+
+</body>
+</html>

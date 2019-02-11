@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h3>Id:  <em th:text="${car.id}"></em></h3>
+<h3>Car make:  <em th:text="${car.car_make}"></em></h3>
+<h3>Car model: <em th:text="${car.model}"></em></h3>
+<h3>Car Price: <em th:text="${car.price}"></em></h3>
+<h3>Date of release: <em th:text="${car.date_release}"></em></h3>
+
+<a th:href="'/cars/delete/' + ${car.id}">Delete</a>
+
+</body>
+</html> 

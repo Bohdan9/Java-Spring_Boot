@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    
+<link rel="stylesheet" href='style2.css'/>
+
+
+<meta charset="UTF-8">
+<title>Title</title>
+</head>
+
+
+<body>
+
+
+<a th:href="'/homework/all'">
+    <button class="size" >Show all</button>
+</a>
+<a th:href="'/homework/morethen'">
+    <button th:class="size">More than 10000</button>
+</a>
+<a th:href="'/homework/morethen2'">
+    <button th:class="size">More than 2000</button>
+</a>
+<a th:href="'/homework/last10'">
+    <button th:class="size">Last 10</button>
+</a>
+
+
+<ul th:each="cars : ${all}">
+    <li th:text="${cars.car_make} + ' , ' + ${cars.model} + ' ,' + ${cars.price}  + ' ,' + ${cars.date_release} ">
+
+    </li>
+
+
+</ul>
+
+</body>
+
+</html>
